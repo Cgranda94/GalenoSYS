@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalenoSYS.ResumenCitas">
+    <NavigationPage.TitleView>
+        <StackLayout>
+
+            <Label
+               Text="GALENO System"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="White"
+               VerticalTextAlignment="Center" />
+            
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Image Source="OKlight" Aspect="AspectFill"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <!-- fila 0-->
+                        <RowDefinition Height="30" />
+                        <!-- fila 1-->
+                        <RowDefinition Height="50" />
+                        <!-- fila 2-->
+                        <RowDefinition Height="30" />
+                        <!-- fila 3-->
+                        <RowDefinition Height="50" />
+                        <!-- fila 4-->
+                        <RowDefinition Height="30" />
+                        <!-- fila 5-->
+                        <RowDefinition Height="50" />
+                        <!-- fila 6-->
+                        <RowDefinition Height="30" />
+                        <!-- fila 7-->
+                        <RowDefinition Height="150" />
+                        <!-- fila 8-->
+                        <RowDefinition Height="50" />
+                        <!-- fila 9-->
+                        <RowDefinition Height="50" />
+                        <!-- fila 9-->
+                        <RowDefinition Height="150" />
+                    </Grid.RowDefinitions>
+                    <StackLayout IsVisible="false" Grid.Row="1" HorizontalOptions="Center" >
+                        <Label x:Name="txtid" TextColor="White" FontSize="18" FontAttributes="Bold"></Label>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="1" HorizontalOptions="Center" >
+                        <Label x:Name="txtespecialidad" Text="ESPECIALIDAD" TextColor="White" FontSize="18" FontAttributes="Bold"></Label>
+                    </StackLayout>
+
+
+
+                    <StackLayout Grid.Row="3" HorizontalOptions="Center" >
+                        <Label x:Name="txtmedico" Text="MEDICO"  FontSize="18"></Label>
+                    </StackLayout>
+
+
+                    <StackLayout Grid.Row="5" HorizontalOptions="Center" >
+                        <Label x:Name="txtfecha" Text="FECHA" TextColor="White" FontSize="18" FontAttributes="Bold"></Label>
+                    </StackLayout>
+
+
+
+                    <StackLayout Grid.Row="7" HorizontalOptions="Center" >
+                        <Label x:Name="txthora" Text="HORA" TextColor="White" FontSize="18" FontAttributes="Bold"></Label>
+                    </StackLayout>
+                    <StackLayout IsVisible="false" Grid.Row="1" HorizontalOptions="Center" >
+                        <Label x:Name="txtestado" TextColor="White" FontSize="18" FontAttributes="Bold"></Label>
+                    </StackLayout>
+                    
+                </Grid>
+
+            </Grid>
+            
+
+                <Button x:Name="btneliminar" Text="Cancelar Cita" HorizontalOptions="Center" Clicked="btneliminar_Clicked" TextColor="White" FontAttributes="Bold" BackgroundColor="SteelBlue" />
+            
+
+        </StackLayout>
+        </ContentPage.Content>
+
+</ContentPage>

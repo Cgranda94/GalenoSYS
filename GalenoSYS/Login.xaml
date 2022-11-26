@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalenoSYS.Login">
+
+    <NavigationPage.TitleView>
+        <Label Text="GALENO System" TextColor="White" FontAttributes="Bold" FontSize="24" HorizontalTextAlignment="Center"/>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+
+            <StackLayout BackgroundColor="White">
+                <Grid>
+                    <Image Source="login" Aspect="AspectFill"/>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="400"/>                        <!-- fila 0-->
+                            <RowDefinition Height="130" />                       <!-- fila 1-->
+                            <RowDefinition Height="60" />                        <!-- fila 2-->
+                            <RowDefinition Height="30" />                        <!-- fila 3-->
+                            <RowDefinition Height="30" />                        <!-- fila 4-->
+                    </Grid.RowDefinitions>
+
+<!--                    <ListView x:Name="ListDataUser" Grid.Row="0" IsPullToRefreshEnabled="True" HasUnevenRows="True" SeparatorVisibility="Default" IsVisible="true" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout >
+                                        <Label x:Name="lbllogin" Text="{Binding usr_login}"  FontAttributes="Bold"></Label>
+                                        <Label x:Name="lblnom" Text="{Binding usr_nombre}"  FontAttributes="Bold" ></Label>
+                                        <Label x:Name="lblape" Text="{Binding usr_apellido}"  FontAttributes="Bold" ></Label>
+                                        <Label x:Name="lblpass" Text="{Binding usr_pass}"  FontAttributes="Bold" ></Label>
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+-->
+                    <StackLayout Orientation="Horizontal" Grid.Row="0" IsVisible="false" >
+                        <Label x:Name="lblidok" Text ="id" TextColor="Black" HorizontalOptions="Start"></Label>
+                        <Label x:Name="lblloginok" Text ="ci" TextColor="Black" HorizontalOptions="Start"></Label>
+                        <Label x:Name="lblnombok"  Text ="nombre" TextColor="Black" HorizontalOptions="Start"></Label>
+                        <Label x:Name="lblapelliok" Text ="apellido" TextColor="Black" HorizontalOptions="Start"></Label>
+                        <Label x:Name="lblpassiok" Text ="pass" TextColor="Black" HorizontalOptions="Start"></Label>
+                        <Label x:Name="lblcorreook" Text ="correo" TextColor="Black" HorizontalOptions="Start"></Label>
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Horizontal" Grid.Row="3"  >
+                        <Label 
+                                Text="Registrarse    " TextColor="Black" FontSize="13" FontAttributes="Bold" HorizontalOptions="EndAndExpand">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+
+
+                    <StackLayout Padding="10,0,10,0" Grid.Row="1"  >
+                        <Frame HasShadow="True" HeightRequest="50" Padding="0,5,0,5" >
+                            <Entry x:Name="txtUsuario"  Placeholder="Ingrese su cédula" PlaceholderColor="DarkBlue" Keyboard="Numeric" MaxLength="15" FontSize="18" HorizontalTextAlignment="Center" HorizontalOptions="Center" FontAttributes="Bold" WidthRequest="160"/>
+                        </Frame>
+                        <Frame HasShadow="True" HeightRequest="40" Padding="0,5,0,5">
+                            <Entry x:Name="txtContrasena"  Placeholder="Contraseña" IsPassword="True" PlaceholderColor="DarkBlue" MaxLength="20" FontSize="18" HorizontalTextAlignment="Center" HorizontalOptions="Center"  WidthRequest="160" />
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Padding="0,0,0,0" Grid.Row="2" >
+                        <Button x:Name="btnIniciar"  Text="INGRESAR" Clicked="btnIniciar_Clicked" TextColor="White" BackgroundColor="SteelBlue" CornerRadius="10" FontSize="16" HorizontalOptions="Center" WidthRequest="180" HeightRequest="40" />
+                    </StackLayout>
+                        
+                    <StackLayout Orientation="Horizontal" Grid.Row="3"  >
+                        <Label 
+                                Text="Registrarse    " TextColor="Black" FontSize="13" FontAttributes="Bold" HorizontalOptions="EndAndExpand">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                        </StackLayout>
+
+                    <StackLayout Grid.Row="4" HorizontalOptions="Center" >
+                        <Label 
+                                Text="Iniciar Sesión Huella Dactilar" TextColor="Black" FontSize="12" FontAttributes="Bold" HorizontalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>                     
+                        
+
+
+                </Grid>
+                </Grid>
+
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

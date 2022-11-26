@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalenoSYS.Medicos">
+    <NavigationPage.TitleView>
+        <StackLayout
+          Orientation="Horizontal"
+          VerticalOptions="Center"
+          Spacing="10">
+            <Label
+               Text="GALENO System"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="White"
+               VerticalTextAlignment="Center" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Image Source="OKlight" Aspect="AspectFill"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />                          <!-- fila 0-->
+                        <RowDefinition Height="30" />                        <!-- fila 1-->
+                        <RowDefinition Height="50" />                        <!-- fila 2-->
+                        <RowDefinition Height="30" />                        <!-- fila 3-->
+                        <RowDefinition Height="50" />                        <!-- fila 4-->
+                        <RowDefinition Height="30" />                        <!-- fila 5-->
+                        <RowDefinition Height="50" />                        <!-- fila 6-->
+                        <RowDefinition Height="30" />                        <!-- fila 7-->
+                        <RowDefinition Height="150" />                        <!-- fila 8-->
+                        <RowDefinition Height="50" />                        <!-- fila 9-->
+                        <RowDefinition Height="50" />                        <!-- fila 9-->
+                    </Grid.RowDefinitions>
+
+                    <StackLayout Grid.Row="1" HorizontalOptions="Center" >
+                        <Label Text="ESPECIALIDADES" TextColor="White" FontSize="18" FontAttributes="Bold"> </Label>
+                    </StackLayout>
+                    
+                    <StackLayout Grid.Row="2" HorizontalOptions="Center" >
+                        <Frame HasShadow="True" WidthRequest="330" HeightRequest="40" Padding="0,0,0,0">
+                            <Picker Title="Seleccionar Especialidad" FontSize="16" HorizontalOptions="CenterAndExpand" WidthRequest="300" x:Name="txtespecialidad" SelectedIndexChanged="txtespecialidad_SelectedIndexChanged_1" ItemDisplayBinding="{Binding especialidad}">
+                                <Picker.ItemsSource >
+                                    <x:Array Type="{x:Type x:String }">
+                                        
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                        </Frame>
+                    </StackLayout>
+
+
+                    <StackLayout Grid.Row="3" HorizontalOptions="Center" >
+                        <Label Text="MEDICOS" TextColor="White" FontSize="18" FontAttributes="Bold"></Label>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="4" HorizontalOptions="Center" >
+                        <Frame HasShadow="True" WidthRequest="330" HeightRequest="40" Padding="0,0,0,0">
+                            <Picker Title="Seleccionar Médico" FontSize="16" HorizontalOptions="CenterAndExpand" WidthRequest="300" x:Name="txtmedicos" ItemDisplayBinding="{Binding nombre_medico}">
+                                <Picker.ItemsSource>
+                                    <x:Array Type="{x:Type x:String}">
+                                        
+                                    </x:Array>
+                                </Picker.ItemsSource>
+                            </Picker>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="5" HorizontalOptions="Center" >
+                        <Label Text="FECHA" TextColor="White" FontSize="18" FontAttributes="Bold"></Label>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="6" HorizontalOptions="Center" >
+                        <Frame HasShadow="True" WidthRequest="330" HeightRequest="40" Padding="0,0,0,0">
+                            <DatePicker VerticalOptions="Center" HorizontalOptions="Center" MinimumDate="01/01/2022" MaximumDate="01/12/2023" Format="dd/MM/yyyy" x:Name="txtfecha"/>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="7" HorizontalOptions="Center" >
+                        <Label Text="HORA" TextColor="White" FontSize="18" FontAttributes="Bold"></Label>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="8" HorizontalOptions="Center" >
+                        <Frame HasShadow="True" WidthRequest="330" HeightRequest="40" Padding="0,0,0,0">
+                            <TimePicker x:Name="txthora"
+                            Time="11:00:00"
+                            Format="T" HorizontalOptions="Center" />
+                        </Frame>
+                    </StackLayout>
+                    
+                    <Button x:Name="btnGrabarCita" Text="AGENDAR" Clicked="btnGrabarCita_Clicked" Grid.Row="9" TextColor="White" FontAttributes="Bold" BackgroundColor="SteelBlue" />
+                    <Button x:Name="btnVerCita" Text="Mis Citas" Clicked="btnVerCitas_Clicked" Grid.Row="10" TextColor="White" FontAttributes="Bold" BackgroundColor="SteelBlue" />
+                </Grid>
+            </Grid>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalenoSYS.Datos">
+    <NavigationPage.TitleView>
+        <StackLayout
+          Orientation="Horizontal"
+          VerticalOptions="Center"
+          Spacing="10">
+            <Label
+               Text="GALENO System"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="White"
+               VerticalTextAlignment="Center" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Mi Información " FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="End" FontSize="18"/>
+
+            <Grid>
+                <Image Source="OKlight" Aspect="AspectFill"/>
+                
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="0"/>                        <!-- fila 0-->
+                        <RowDefinition Height="30"/>                        <!-- fila 1-->
+                        <RowDefinition Height="20"/>                        <!-- fila 2-->
+                        <RowDefinition Height="40"/>                        <!-- fila 3-->
+                        <RowDefinition Height="20"/>                        <!-- fila 4-->
+                        <RowDefinition Height="40"/>                        <!-- fila 5-->
+                        <RowDefinition Height="20"/>                        <!-- fila 6-->
+                        <RowDefinition Height="40"/>                        <!-- fila 7-->
+                        <RowDefinition Height="20"/>                        <!-- fila 8-->
+                        <RowDefinition Height="40"/>                        <!-- fila 9-->
+                        <RowDefinition Height="20"/>                        <!-- fila 10-->
+                        <RowDefinition Height="40"/>                        <!-- fila 11-->
+                        <RowDefinition Height="20"/>                        <!-- fila 12-->
+                        <RowDefinition Height="40"/>                        <!-- fila 13-->
+                        <RowDefinition Height="40"/>                        <!-- fila 14-->
+                        <RowDefinition Height="50"/>                        <!-- fila 15-->
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>                        <!-- columna0  -->
+                        <ColumnDefinition/>                        <!-- columna1  -->
+                    </Grid.ColumnDefinitions>
+
+
+                    <Label Text="Información del Paciente" FontSize="Medium" Grid.Row="1" Grid.ColumnSpan="3" FontAttributes="Bold" TextColor="White" HorizontalTextAlignment="Center" />
+
+                    <Label Text="Cédula de Identidad:" FontAttributes="Bold" Grid.Row="2" Grid.ColumnSpan="3" />
+                    <Entry x:Name="txt_paclogin" Placeholder="Cédula" PlaceholderColor="White" FontAttributes="Bold" Keyboard="Numeric" Grid.Row="3" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" IsEnabled="False"/>
+
+                    <Label Text="Nombres:" FontAttributes="Bold" Grid.Row="4" Grid.ColumnSpan="3"/>
+                    <Entry x:Name="txt_pacnombre" Placeholder="Nombres" PlaceholderColor="White" Keyboard="Text" Grid.Row="5" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" />
+
+                    <Label Text="Apellidos:" FontAttributes="Bold" Grid.Row="6" Grid.ColumnSpan="3"/>
+                    <Entry x:Name="txt_pacapelli" Placeholder="Apellidos" PlaceholderColor="White" Keyboard="Text" Grid.Row="7" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" />
+
+                    <Label Text="Password:" FontAttributes="Bold" Grid.Row="8" Grid.ColumnSpan="3"/>
+                    <Entry x:Name="txt_pacpass1" Placeholder="Contraseña" PlaceholderColor="White"  Keyboard="Text" Grid.Row="9" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" />
+
+                    <Label Text="Confirme Password:" FontAttributes="Bold" Grid.Row="10" Grid.ColumnSpan="3"/>
+                    <Entry x:Name="txt_pacpass2" Placeholder="Confirmación Contraseña" PlaceholderColor="White"  Keyboard="Text" Grid.Row="11" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" />
+
+                    <Label Text="Correo:" FontAttributes="Bold" Grid.Row="12" Grid.ColumnSpan="3"/>
+                    <Entry x:Name="txt_pacemail" Placeholder="Correo Electrónico" PlaceholderColor="White" Keyboard="Email" Grid.Row="13" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" />
+                    
+                    <Entry x:Name="txt_pacid" Placeholder="ID" PlaceholderColor="White" Keyboard="Text" Grid.Row="14" Grid.ColumnSpan="3" HorizontalTextAlignment="Start" IsVisible="false" IsEnabled="False"/>
+
+
+                    <Button x:Name="btnActuliza" Text="ACTUALIZAR" Clicked="btnActuliza_Clicked" Grid.Row="15" Grid.ColumnSpan="3" TextColor="White" FontAttributes="Bold" BackgroundColor="SteelBlue" />
+
+                </Grid>
+            </Grid>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

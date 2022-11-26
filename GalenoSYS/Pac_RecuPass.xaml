@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalenoSYS.Pac_RecuPass">
+    <NavigationPage.TitleView>
+        <StackLayout
+          Orientation="Horizontal"
+          VerticalOptions="Start"
+          Spacing="10">
+            <Label
+               Text="GALENO System"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="White"
+               VerticalTextAlignment="Start" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Recupera Contraseña" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="End" FontSize="18"/>
+                <Image Source="fon_pass" Aspect="AspectFit"/>
+            <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"/>                            <!-- fila 0-->
+                            <RowDefinition Height="30"/>                            <!-- fila 1-->
+                            <RowDefinition Height="50"/>                            <!-- fila 2-->
+                            <RowDefinition Height="50" />                            <!-- fila 3-->
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>                    <!-- columna0  -->
+                            <ColumnDefinition/>                    <!-- columna1  -->
+                        </Grid.ColumnDefinitions>
+
+                        <Label Text="Información del Paciente" FontSize="Medium" Grid.Row="0" Grid.ColumnSpan="3" FontAttributes="Bold" TextColor="black" HorizontalTextAlignment="Center" />
+                        <Label Text="Ingrese su número de cédula:" Grid.Row="1" Grid.ColumnSpan="3" TextColor="Black" HorizontalTextAlignment="Start" />
+                        <Entry x:Name="txt_recced" Placeholder="Cédula / Ruc" PlaceholderColor="DarkBlue" Keyboard="Numeric" Grid.Row="2" Grid.ColumnSpan="3" HorizontalTextAlignment="Center" MaxLength="15" />
+    
+                       <Button x:Name="btnIniciar" Text="ENVIAR" Clicked="btnIniciar_Clicked" Grid.Row="3" Grid.ColumnSpan="3" TextColor="black" BackgroundColor="SteelBlue" />
+
+                </Grid>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

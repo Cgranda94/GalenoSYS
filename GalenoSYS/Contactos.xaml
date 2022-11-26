@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalenoSYS.Contactos">
+    <NavigationPage.TitleView>
+        <StackLayout
+          Orientation="Horizontal"
+          VerticalOptions="Center"
+          Spacing="10">
+            <Label
+               Text="GALENO System"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="White"
+               VerticalTextAlignment="Center" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Grid>
+                <Image Source="OKlight" Aspect="AspectFill"/>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20" />                        <!-- fila 0-->
+                        <RowDefinition Height="50" />                        <!-- fila 1-->
+                        <RowDefinition Height="40" />                        <!-- fila 2-->
+                        <RowDefinition Height="50" />                        <!-- fila 3-->
+                        <RowDefinition Height="50" />                        <!-- fila 4-->
+                        <RowDefinition Height="50" />                        <!-- fila 5-->
+                        <RowDefinition Height="50" />                        <!-- fila 6-->
+                        <RowDefinition Height="30" />                        <!-- fila 7-->
+                        <RowDefinition Height="100" />                       <!-- fila 8-->
+                        <RowDefinition Height="50" />                        <!-- fila 9-->
+                        <RowDefinition Height="150" />                       <!-- fila 10-->
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Center" >
+                        <Label Text="CONTÁCTANOS" TextColor="White" FontSize="18" FontAttributes="Bold"></Label>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="3" Grid.Column="0" HorizontalOptions="Center" >
+                        <Label Text="Teléfonos:" TextColor="DarkBlue" FontSize="18" FontAttributes="Bold"></Label>
+                    </StackLayout>
+
+                    <StackLayout Padding="0,0,0,0" Grid.Row="2" Grid.Column="1" >
+                        <Button x:Name="Callphone"  Text="Llámanos" Clicked="Callphone_Clicked" TextColor="White" BackgroundColor="SteelBlue" CornerRadius="10" FontSize="12" HorizontalOptions="Center" WidthRequest="130" HeightRequest="40" />
+                    </StackLayout>
+
+                    <StackLayout Padding="0,0,0,0" Grid.Row="3" Grid.Column="1" >
+                        <Button x:Name="SMS"  Text="Envío SMS" Clicked="SMS_Clicked" TextColor="White" BackgroundColor="SteelBlue" CornerRadius="10" FontSize="12" HorizontalOptions="Center" WidthRequest="130" HeightRequest="40" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="4" Grid.ColumnSpan="2" HorizontalOptions="Center" >
+                        <Label Text="593 995046654 / 022 404563" TextColor="Tomato" FontSize="18" ></Label>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="5" HorizontalOptions="Center" >
+                        <Label Text="Correo:" TextColor="DarkBlue" FontSize="18" FontAttributes="Bold"></Label>
+                    </StackLayout>
+
+                    <StackLayout Padding="0,0,0,0"  Grid.Row="5" Grid.Column="1" >
+                        <Button x:Name="CORREO"  Text="Envío email" Clicked="CORREO_Clicked" TextColor="White" BackgroundColor="SteelBlue" CornerRadius="10" FontSize="12" HorizontalOptions="Center" WidthRequest="130" HeightRequest="40" />
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="6" Grid.ColumnSpan="2" HorizontalOptions="Center" >
+                        <Label Text="soporte@escazuit.com" TextColor="Tomato" FontSize="18" ></Label>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="7" Grid.ColumnSpan="2" HorizontalOptions="Center" >
+                        <Label Text="Redes Sociales:" TextColor="DarkBlue" FontSize="18" FontAttributes="Bold"></Label>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="8" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalOptions="Center">
+                        <Image Source="logotw"  HeightRequest="30"  WidthRequest="30" />
+                        <Image Source="logofb"  HeightRequest="50"  WidthRequest="50" />
+                        <Image Source="logogoo"  HeightRequest="30"  WidthRequest="30" />
+                    </StackLayout>
+
+
+                </Grid>
+            </Grid>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

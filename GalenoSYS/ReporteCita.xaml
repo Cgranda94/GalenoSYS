@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalenoSYS.ReporteCita">
+    <NavigationPage.TitleView>
+        <StackLayout
+          Orientation="Horizontal"
+          VerticalOptions="Center"
+          Spacing="10">
+            <Label
+               Text="GALENO System"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="White"
+               VerticalTextAlignment="Center" />
+            <Image Source="OKlight" Aspect="AspectFill"/>
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <Image Source="OKlight" Aspect="AspectFill"/>
+    </ContentPage.Content>
+    <StackLayout>
+        
+        <Label Text="Citas Agendadas" FontSize="20"               
+                HorizontalOptions="Center">
+
+        </Label>
+
+
+
+
+        <ListView x:Name="MyListView" ItemSelected="MyListView_ItemSelected" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label x:Name="lblcodigo" Text="{Binding nombre_doctor}" HorizontalOptions="Center">
+                            
+
+                            </Label>
+                            <Label x:Name="lblapellido" Text="{Binding fecha_cita}" HorizontalOptions="Center">
+
+                            </Label>
+                            <Label x:Name="lbledad" Text="{Binding hora_cita}">
+
+                            </Label>
+                            <Label x:Name="lblnombre" Text="{Binding cita_nombrepaciente}">
+
+                            </Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+        </Grid>
+
+       
+    </StackLayout>
+</ContentPage>

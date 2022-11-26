@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalenoSYS.Menu">
+    <NavigationPage.TitleView>
+        <StackLayout
+          Orientation="Horizontal"
+          VerticalOptions="Center"
+          Spacing="10">
+            <Label
+               Text="GALENO System"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="White"
+               VerticalTextAlignment="Center" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+
+
+    <ContentPage.Content>
+            <StackLayout BackgroundColor="White">
+                <Grid>
+                    <Label Text="Menú Principal " FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="End" FontSize="18"/>
+                    <Image Source="fonmenuf" Aspect="AspectFit"/>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50" />                        <!-- fila 0-->
+                            <RowDefinition Height="30" />                        <!-- fila 1-->
+                            <RowDefinition Height="30" />                        <!-- fila 2-->
+                            <RowDefinition Height="220" />                        <!-- fila 3-->
+                            <RowDefinition Height="160" />                          <!-- fila 4-->
+                            <RowDefinition Height="160" />                        <!-- fila 5-->
+                            <RowDefinition Height="30" />                        <!-- fila 6-->
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Bienvenido:"  TextColor="Black" HorizontalTextAlignment="End" FontSize="20" Grid.Row="1" Grid.Column="0" />
+                    <Label x:Name="lblNombresPac"  TextColor="Black" HorizontalTextAlignment="Start" FontSize="25" Grid.Row="2" Grid.ColumnSpan="3" />
+
+                    <StackLayout IsVisible="false" Grid.Row="3" Grid.ColumnSpan="3" >
+                        <Label x:Name="lblIDPac" HorizontalTextAlignment="Start" FontSize="15"  />
+                        <Label x:Name="lblCIPac" HorizontalTextAlignment="Start" FontSize="15"  />
+                        <Label x:Name="lblPASSPac" HorizontalTextAlignment="Start" FontSize="15"  />
+                        <Label x:Name="lblCOPac" HorizontalTextAlignment="Start" FontSize="15"  />
+                        <Label x:Name="lblNomPac" HorizontalTextAlignment="Start" FontSize="15"  />
+                        <Label x:Name="lblApePac" HorizontalTextAlignment="Start" FontSize="15"  />
+                    </StackLayout>
+
+
+                    <StackLayout Grid.Row="4" Grid.Column="0"   >
+                            <Label Text="Mis Datos" TextColor="White" FontSize="16" HorizontalTextAlignment="Center" Padding="0,120">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="4" Grid.Column="1" >
+                            <Label Text="Médicos" TextColor="White" FontSize="16" HorizontalTextAlignment="Center" Padding="0,120">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" />
+                                    </Label.GestureRecognizers>
+                                </Label>
+                        </StackLayout>
+
+                        <StackLayout Grid.Row="4" Grid.Column="2" >
+                            <Label Text="Citas" TextColor="White" FontSize="16" HorizontalTextAlignment="Center" Padding="0,120">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                    </StackLayout>
+
+
+                    <StackLayout Grid.Row="5" Grid.Column="0" >
+                        <Label Text="Ubicación" TextColor="White" FontSize="16" HorizontalTextAlignment="Center" Padding="0,120">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="5" Grid.Column="1" >
+                        <Label Text="Contactos" TextColor="White" FontSize="16" HorizontalTextAlignment="Center" Padding="0,120">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_4" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+
+                    <StackLayout Grid.Row="5" Grid.Column="2" >
+                        <Label Text="Salir" TextColor="White" FontSize="16" HorizontalTextAlignment="Center" Padding="0,120">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_5" />
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+                </Grid>
+                </Grid>
+
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalenoSYS.ListaMedicos">
+    
+    <NavigationPage.TitleView>
+        <StackLayout
+          Orientation="Horizontal"
+          VerticalOptions="Center"
+          Spacing="10">
+            <Label
+               Text="GALENO System"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="White"
+               VerticalTextAlignment="Center" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout Padding="0,0,10,0">
+            <SearchBar TextChanged="SearchBar_TextChanged" > </SearchBar>
+                    <ListView x:Name="ListViewMedicos" IsPullToRefreshEnabled="True" HasUnevenRows="True" SeparatorVisibility="Default" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal" >
+                                        <Image Source="{Binding med_pathfoto}" WidthRequest="80" HeightRequest="100"/>
+                                        <StackLayout>
+                                            <Label x:Name="lblnombres" Text="{Binding med_nombrescompletos} "  FontAttributes="Bold" ></Label>
+                                            <Label x:Name="lblespecia" Text="{Binding med_especialidad}" TextColor="Gray" ></Label>
+                                            <Label x:Name="lblaten" Text="{Binding med_diatencion}" TextColor="Gray" ></Label>
+                                            <Label x:Name="lblhora" Text="{Binding med_horatencion}" TextColor="Gray" ></Label>
+                                </StackLayout>
+                                        <Button x:Name="btnOK" Text="Agendar Cita" BorderColor="Silver" FontSize="Small" TextColor="White" BackgroundColor="CadetBlue" VerticalOptions="Center" HorizontalOptions="EndAndExpand" Clicked="btnOK_Clicked" />
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

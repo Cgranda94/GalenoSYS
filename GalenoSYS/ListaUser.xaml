@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GalenoSYS.ListaUser">
+    <NavigationPage.TitleView>
+        <StackLayout
+          Orientation="Horizontal"
+          VerticalOptions="Start"
+          Spacing="10">
+            <Label
+               Text="GALENO System"
+               FontSize="20"
+               FontAttributes="Bold"
+               TextColor="White"
+               VerticalTextAlignment="Start" />
+        </StackLayout>
+    </NavigationPage.TitleView>    
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Lista de Usuarios" FontAttributes="Bold" TextColor="Black" HorizontalTextAlignment="End" FontSize="18"/>
+                <Grid>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="10"/>                        <!-- fila 0-->
+                        <RowDefinition Height="480"/>                        <!-- fila 1-->
+                        <RowDefinition Height="50"/>                        <!-- fila 2-->
+                        <RowDefinition Height="50" />                       <!-- fila 3-->
+                        <RowDefinition Height="50" />                       <!-- fila 4-->
+                    </Grid.RowDefinitions>
+
+
+                    
+
+                    <ListView x:Name="ListDataUser" Grid.Row="1" IsPullToRefreshEnabled="True" HasUnevenRows="True" SeparatorVisibility="Default" BackgroundColor="Aqua" >
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <StackLayout  BackgroundColor="Brown">
+                                        <!-- <Label x:Name="lblid" Text="{Binding usr_id}"  FontAttributes="Bold" BackgroundColor="Coral"></Label> -->
+                                        <Label x:Name="lbllogin" Text="{Binding usr_login}"  FontAttributes="Bold"></Label>
+                                        <Label x:Name="lblnom" Text="{Binding usr_nombre}"  FontAttributes="Bold" ></Label>
+                                        <Label x:Name="lblape" Text="{Binding usr_apellido}"  FontAttributes="Bold" ></Label>
+                                        <Label x:Name="lblpass" Text="{Binding usr_pass}"  FontAttributes="Bold" ></Label>
+                                        <!--  <Label x:Name="lblrol" Text="{Binding usr_rol}"  FontAttributes="Bold" ></Label> -->
+                                        <!-- <Label x:Name="lblestado" Text="{Binding usr_estado}"  FontAttributes="Bold" ></Label> -->
+                                        <!-- <Label x:Name="lblcorreo" Text="{Binding usr_correo}"  FontAttributes="Bold" ></Label> -->
+                                        <!-- <Label x:Name="lblpath" Text="{Binding usr_pathfoto}"  FontAttributes="Bold" ></Label> -->
+                                    </StackLayout>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+
+
+                    <Label Text="Ingrese su número de cédula:" Grid.Row="2"  TextColor="Black" HorizontalTextAlignment="Start" BackgroundColor="Crimson" />
+                    <Entry x:Name="txt_recced" Placeholder="Cédula / Ruc" PlaceholderColor="DarkBlue" Keyboard="Numeric" Grid.Row="3" HorizontalTextAlignment="Center" MaxLength="15" BackgroundColor="DarkGreen"/>
+
+                    <Button x:Name="btnConsulta" Text="ENVIAR" Clicked="btnConsulta_Clicked" Grid.Row="4"  TextColor="black" BackgroundColor="SteelBlue" />
+                    
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+
+
+
+    </ContentPage.Content>
+</ContentPage>
